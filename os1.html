@@ -159,7 +159,6 @@ button:hover {
 </div>
 
 <script>
-// ---------- CYBERPUNK BACKGROUND ----------
 const bg = document.getElementById('bgCanvas');
 const ctxBg = bg.getContext('2d');
 bg.width = window.innerWidth;
@@ -190,7 +189,6 @@ function animateBg(){
 }
 animateBg();
 
-// ---------- ADD REQUEST BOX ----------
 document.getElementById('addBtn').addEventListener('click', ()=>{
   const container=document.getElementById('requestContainer');
   const input=document.createElement('input');
@@ -199,7 +197,6 @@ document.getElementById('addBtn').addEventListener('click', ()=>{
   container.appendChild(input);
 });
 
-// ---------- DISK SIMULATION ----------
 document.getElementById('runBtn').addEventListener('click', simulate);
 
 function simulate(){
@@ -279,7 +276,7 @@ function drawAnimatedGraph(points,max){
     const curY=y1+(y2-y1)*progress;
 
     ctx.strokeStyle="#00eaff";
-    ctx.lineWidth=1.3; /* thinner line */
+    ctx.lineWidth=1.3; 
     ctx.beginPath();
     ctx.moveTo(x1,y1);
     ctx.lineTo(curX,curY);
@@ -338,7 +335,6 @@ function showDescription(algo){
 }
 </script>
 
-<!-- Hidden C Reference -->
 <pre style="display:none">
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -360,3 +356,4 @@ int main(){
 </pre>
 </body>
 </html>
+
